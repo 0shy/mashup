@@ -1,43 +1,46 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
+    <head>
+    <title>서울특별시 행사 알림이!</title>
+    <meta charset="utf-8">
+    <meta name ="mobile-web-app-capable" content ="yes">
+    <meta name ="apple-mobile-web-app-capable" content ="yes">
+    <meta name ="viewport" content ="width=device-width, initial-scale=1">
+    <link rel ="shortcut icon" href ="icon.png" type ="image/x-icon">
+    <link rel ="apple-touch-icon" href =="icon.png">
+    <link rel =" href" ="icon.png">
+    <link rel="stylesheet" href="event_info.css">
+    <link rel="icon" type="image/png" href="good.jpg" sizes="192x192"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+            <!-- Brand/logo -->
+            <a class="navbar-brand" href="#">
+             <img src="good.jpg" alt="logo" style="width: 40px;">
+            </a>
+            <h3 style="color: rgb(255, 255, 255);"> 서울특별시 행사 알림이 </h3>
+        </nav>
+        <SELECT id="gu" >
+                <option selected>공연 분야</option>
+                <option value="클래식">클래식</option>
+                <option value="콘서트">콘서트</option>
+                <option value="연극">연극</option>
+                <option value="뮤지컬/오페라">뮤지컬/오페라</option>
+                <option value="무용">무용</option>
+        </SELECT>
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+        <input type="button" id="what" value="검색" /><br>
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+        <div class="jumbotron jumbotron-fluid">
+            <h3 style="text-align: center;"> 관람하고 싶은 공연 분야를 선택하고 검색 버튼을 누르세요. </h3>
+        </div>
+        <div id="dataDiv" class="d-flex justify-content-center"></div>
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  </body>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <script src="event_info.js"></script>
+    </body>
 </html>
